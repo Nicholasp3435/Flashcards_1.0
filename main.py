@@ -45,7 +45,9 @@ def study_cards(study_stack):
         visible_card = draw_card(study_stack)
         if not(ask_card(visible_card)):
             add_card(study_stack, visible_card, random.randint(0, len(study_stack)))
-            print(f"Wrong; correct answer(s) are: {visible_card.definitions}")
+            print(f"Wrong; correct answer(s) are: {visible_card.definitions}\n")
+        else:
+            print("Correct :3\n")
     
 # debug stacks
 def print_stack(card_stack):
