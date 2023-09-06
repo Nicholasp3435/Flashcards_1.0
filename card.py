@@ -1,10 +1,7 @@
 class Card:
-    def __init__(self, term, definition):
+    def __init__(self, term, definitions):
         self.term = term
-        self.definition = definition
+        self.definitions = definitions
 
-    def get_term():
-        return self.term
-
-    def get_definition():
-        return self.definition
+    def __str__(self):
+        return f"{self.term}: {', '.join(self.definitions)}"
