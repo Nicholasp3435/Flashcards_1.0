@@ -1,0 +1,8 @@
+class Card:
+    def __init__(self, term, definitions):
+        self.term = term
+        self.definitions = definitions
+
+    def __str__(self):
+        return f"{self.term}: {', '.join(self.definitions)}"
+

@@ -1,5 +1,6 @@
 import csv
 import random
+import os
 from card import Card
 
 # default csv file
@@ -62,16 +63,28 @@ def create_cards():
         definitions = definitions.split(',')
         new_card = Card(term, definitions)
         card_stack.append(new_card)
+        print()
     
 
 # saves a card array to a csv file
 def save_flashcards(card_stack, name):
-    file_name = './' + name + '/'+ name
-    f = open(file_name + '.csv', "w")
-    f.close()
-    with open(file_name, 'w') as file:
+    directory_path = os.getcwd() + '/' + name
+    cards_path = directory_path + '/cards.csv'
+    exists = os.path.isfile(cards_path)
+    if not(exists):
+        os.mkdir(directory_path)
+    else:
+        overwrite = input('This file already exists, would you like to overwrite it? (Y/n): ')
+        if (overwrite == "Y"):
+            os.remove(cards_path)
+        else:
+            return
+    with open(cards_path, 'w') as file:
+        save_stack = []
+        for card in card_stack:
+            save_stack.insert(0,[card.term] + card.definitions)
         write = csv.writer(file)
-        write.writerows(card_stack)
+        write.writerows(save_stack)
     
 # debug stacks
 def print_stack(card_stack):
