@@ -56,8 +56,10 @@ def create_cards():
     while(True):
         term = input('Term: ')
         if (term.lower() == 'quit'):
-            name = input('What do you want to call this set? ')
-            save_flashcards(card_stack, name)
+            save = input('Would you like to save this set? (Y/n): ')
+            if (save == 'Y'):
+                name = input('What do you want to call this set? ')
+                save_flashcards(card_stack, name)
             break
         definitions = input('Definition (use commas for multiple): ')
         definitions = definitions.split(',')
@@ -86,10 +88,18 @@ def save_flashcards(card_stack, name):
         write = csv.writer(file)
         write.writerows(save_stack)
     
+def start():
+    print("Welcome to Nic's Flashcard App 1.0")
+    purpose = input('Would you like to study or make some flashcards? (study/make): ')
+    if (purpose == 'study'):
+        study_set = input('What set would you like to study? ')
+        cards = load_flashcards('./' + study_set + '/cards.csv')
+        study_cards(cards)
+        
+
 # debug stacks
 def print_stack(card_stack):
     for i in range(len(card_stack)):
         print(card_stack[i])
 
-flashcard_stack = load_flashcards(sample_csv)
-create_cards()
+start()
