@@ -49,10 +49,34 @@ def study_cards(study_stack):
         else:
             print("Correct :3\n")
     
+# creates a card stack
+def create_cards():
+    card_stack = []
+    while(True):
+        term = input('Term: ')
+        if (term.lower() == 'quit'):
+            name = input('What do you want to call this set? ')
+            save_flashcards(card_stack, name)
+            break
+        definitions = input('Definition (use commas for multiple): ')
+        definitions = definitions.split(',')
+        new_card = Card(term, definitions)
+        card_stack.append(new_card)
+    
+
+# saves a card array to a csv file
+def save_flashcards(card_stack, name):
+    file_name = './' + name + '/'+ name
+    f = open(file_name + '.csv', "w")
+    f.close()
+    with open(file_name, 'w') as file:
+        write = csv.writer(file)
+        write.writerows(card_stack)
+    
 # debug stacks
 def print_stack(card_stack):
     for i in range(len(card_stack)):
         print(card_stack[i])
 
 flashcard_stack = load_flashcards(sample_csv)
-study_cards(flashcard_stack)
+create_cards()
