@@ -95,6 +95,12 @@ def start():
         study_set = input('What set would you like to study? ')
         cards = load_flashcards('./' + study_set + '/cards.csv')
         study_cards(cards)
+    elif (purpose == 'make'):
+        purpose = input('Would you like to edit a set or create a new one? (edit/new): ')
+        if (purpose == 'new'):
+            create_cards()
+        elif (purpose == 'edit'):
+            print('not yet implemented')
         
 
 # debug stacks
