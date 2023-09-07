@@ -13,19 +13,103 @@ ir/ser (tú), fuiste
 ir/ser (él/ella/usted), fue
 ir/ser (nosotros), fuisteis
 ir/ser (ellos/ellas/ustedes), fueron
+andar (yo), anduve
+andar (tú), anduviste
+andar (él/ella/usted), anduvo
+andar (nosotros),  anduvimos
+andar (ellos/ellas/ustedes), anduvieron
 estar (yo), estuve
 estar (tú), estuviste
 estar (él/ella/usted), estuvo
 estar (nosotros), estuvisteis
 estar (ellos/ellas/ustedes), estuvieron
-poder
-poner
-querer
-saber
-tener
-venir
-decir
-traer
-preferir
-servir
-dormir
+poder (yo), pude
+poder (tú), pudiste
+poder (él/ella/usted), pudo
+poder (nosotros), pudimos
+poder (ellos/ellas/ustedes), pudieron
+poner (yo), puse
+poner (tú), pusiste
+poner (él/ella/usted), puso
+poner (nosotros), pusimos
+poner (ellos/ellas/ustedes), pusieron
+querer (yo), quise
+querer (tú), quisiste
+querer (él/ella/usted), quiso
+querer (nosotros), quisimos
+querer (ellos/ellas/ustedes), quisieron
+saber (yo), sabe
+saber (tú),sabiste
+saber (él/ella/usted), sabo
+saber (nosotros), sabimos
+saber (ellos/ellas/ustedes), sabieron
+tener (yo), tuve
+tener (tú), tuviste
+tener (él/ella/usted), tuvo
+tener (nosotros), tuvimos
+tener (ellos/ellas/ustedes), tuvieron
+venir (yo), vine
+venir (tú), viniste
+venir (él/ella/usted), vino
+venir (nosotros), vinimos
+venir (ellos/ellas/ustedes), vinieron
+decir (yo), dije
+decir (tú), dijiste
+decir (él/ella/usted), dijo
+decir (nosotros), dijimos
+decir (ellos/ellas/ustedes),dijeron
+traer (yo), traje
+traer (tú), trajiste
+traer (él/ella/usted), trajo
+traer (nosotros), trajimos
+traer (ellos/ellas/ustedes), trajeron
+preferir (yo), preferí
+preferir (tú), preferiste
+preferir (él/ella/usted), prefirió
+preferir (nosotros), preferimos
+preferir (ellos/ellas/ustedes), prefirieron
+divertirse (yo), me divertí
+divertirse (tú), te divertías
+divertirse (él/ella/usted), se divertía
+divertirse (nosotros), nos divertíamos
+divertirse (ellos/ellas/ustedes), se divertían
+sentir(se) (yo), me sentí
+sentir(se) (tú),te sentiste
+sentir(se) (él/ella/usted),se sintió
+sentir(se) (nosotros),nos sentimos
+sentir(se) (ellos/ellas/ustedes),se sintieron
+servir (yo),serví
+servir (tú),serviste
+servir (él/ella/usted),sirvió
+servir (nosotros),servimos
+servir (ellos/ellas/ustedes),sirvieron
+conseguir (yo), conseguí
+conseguir (tú),conseguiste
+conseguir (él/ella/usted),consiguió
+conseguir (nosotros),conseguimos
+conseguir (ellos/ellas/ustedes),consiguieron
+pedir (yo),pedí
+pedir (tú),pediste
+pedir (él/ella/usted),pidió
+pedir (nosotros),pedimos
+pedir (ellos/ellas/ustedes),pidieron
+seguir (yo), seguí
+seguir (tú), seguiste
+seguir (él/ella/usted),siguió
+seguir (nosotros),seguimos
+seguir (ellos/ellas/ustedes),siguieron
+vestir(se) (yo), me vestí
+vestir(se) (tú),te vestiste
+vestir(se) (él/ella/usted),se vistió
+vestir(se) (nosotros),nos vestimos
+vestir(se) (ellos/ellas/ustedes),se vistieron
+morir(se) (yo), me morí
+morir(se) (tú),te moriste
+morir(se) (él/ella/usted),se murió
+morir(se) (nosotros),nos morimos
+morir(se) (ellos/ellas/ustedes),se murieron
+dormir (yo), dormí
+dormir (tú), dormiste
+dormir (él/ella/usted), durmió
+dormir (nosotros),dormimos
+dormir (ellos/ellas/ustedes),durmieron
