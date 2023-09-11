@@ -1,14 +1,17 @@
 import csv
 import random
 import os
+from PIL import Image
 from card import Card
 
-# default csv file
-sample_csv = "./sample/sample.csv"
-
-
 # loads a flashcard formatted csv file into an array or cards
-def load_flashcards(csv_filename):
+def load_flashcards(csv_directory):
+    csv_filename = csv_directory + '/cards.csv'
+    try:
+        image_directory = csv_directory + '/images/'
+    except:
+        image_directory = None
+        
     flashcards = []
     
     with open(csv_filename, mode='r') as file:
@@ -16,9 +19,14 @@ def load_flashcards(csv_filename):
         
         for row in reader:
             term = row[0]
+            if (os.path.isfile(image_directory + term + '.png')):
+                image = image_directory + term + '.png'
+            else:
+                image = None
+                
             definitions = [definition.strip() for definition in row[1:]]
             
-            card = Card(term, definitions)
+            card = Card(term, definitions, image)
             flashcards.append(card)
     
     return flashcards
@@ -32,6 +40,10 @@ def draw_card(card_stack, index=0):
 # asks the user for the definition of a card
 def ask_card(card):
     print(f"Term: {card.term}")
+    if not (card.image is None):
+        im = Image.open(open(card.image, 'rb'))
+        im.show()
+        
     answer = input("Definition: ")
     return (answer in card.definitions)
 
@@ -93,7 +105,7 @@ def start():
     purpose = input('Would you like to study or make some flashcards? (study/make): ')
     if (purpose == 'study'):
         study_set = input('What set would you like to study? ')
-        cards = load_flashcards('./' + study_set + '/cards.csv')
+        cards = load_flashcards('./' + study_set)
         study_cards(cards)
     elif (purpose == 'make'):
         purpose = input('Would you like to edit a set or create a new one? (edit/new): ')
