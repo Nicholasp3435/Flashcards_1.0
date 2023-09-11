@@ -3,7 +3,7 @@ class Card:
         self.term = term
         self.definitions = definitions
         if (image is None):
-            image = ''
+            self.image = None
         else:
             self.image = image
 
