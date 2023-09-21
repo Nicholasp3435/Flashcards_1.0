@@ -42,7 +42,7 @@ highway,la carretera
 car,el carro,el coche
 bus station,la estación de autobuses
 metro/subway,el metro
-(bus, etc) stop,la parada
+"(bus, taxi, etc) stop",la parada
 bridge,el puente
 train,el tren
 motorcycle,la motocicleta
@@ -86,7 +86,7 @@ to cross,cruzar
 to turn,doblar
 to park,estacionar
 to drive,manejar
-to stop parar
+to stop, parar
 to go; to keep going,seguir
 to travel,viajar
 to take,tomar
